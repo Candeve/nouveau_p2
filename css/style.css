@@ -48,6 +48,7 @@ a {
 
 .card-title {
     font-size: 16px;
+
 }
 
 .euro {
@@ -78,13 +79,13 @@ nav {
     padding: 15px 2px; /* Espacement interne */
 }
 
-ul {
+.ul_nav {
 display: flex;
 justify-content: center;
 list-style-type: none;
 }
 
-ul li {
+.li_nav {
     padding: 1px;
     margin: 0 10px;
     padding-left: 40px;
@@ -105,51 +106,145 @@ ul li {
     
 }
 .recherche {
-    display: inline-flex;
-    max-width: 100%;
-    overflow: auto;
-    
-    
-
+    display: flex;
+    width: 450px;
+    height: 50px;
+    padding-bottom: 10px;
 }
 .icone_recherche {
     background-color: #F2F2F2;
-    padding: 1rem 1.25rem;
-    border-radius: 30px 0px 0px 30px;
+    padding: 14px;
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }
-.fa-solid {
-    color: black;
-}
+
+
 .barre_recherche {
     width: 200px;
     border-top: #F2F2F2 1px solid;
     border-bottom: #F2F2F2 1px solid;
     border-left: none;
     border-right: none;
-    font-weight: 900;
     padding: 15px;
-
-    
-    
 }
 .barre_recherche:focus {
     outline: none;
 }
+
 .bouton_recherche {
     background-color: #0065FC;
     color: white;
     border: none;
-    border-radius: 0px 30px 30px 0px;
-    padding: 25px;
+    border-radius: 0px 20px 20px 0px;
     font-weight: 900;
     cursor: pointer;
+    padding-left: 35px;
+    padding-right: 35px;
 
 }
+.bouton_recherche:hover {
+    box-shadow: 0 0 10px rgba(27, 15, 187, 0.5);
+}
+
+input::placeholder {
+    font-weight: bold;
+}
+::-webkit-input-placeholder { /* chrome */
+    color: black;
+    font-weight: bold;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+  ::-moz-input-placeholder { /* mozilla */
+    color: black;
+    font-weight: bold;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+  ::-ms-input-placeholder { /* ie */
+    color: black;
+    font-weight: bold;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+  ::-webkit-input-placeholder { /* safari */
+    color: black;
+    font-weight: bold;
+  } 
+  
+  ::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+
+
 /*Section Filtre & infos */
 
+.filtre {
+    display: flex;
+    align-items: baseline;
+    gap: 35px;
+    
+}
+.bouton_filtre {
+    border: 1px solid #F2F2F2;
+    border-radius: 20px;
+    /* optionnel a enlever si bug */
+    padding-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
+}
+.bouton_filtre:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    border-color: #F2F2F2;
+    background-color: #DEEBFF;
+}
 
+.bouton_filtre p {
+margin: 0px;
+
+}
+.bouton_filtre .fa-solid {
+    border-radius: 20px;
+    padding: 14px 17px 14px 17px;;
+    margin-right: 5px;
+}
+
+.fa-solid.fa-person {
+    padding: 14px 17px 14px 17px;
+    ;
+}
+.icone_information {
+    display: flex;
+    align-items:baseline;
+}
+.bouton_information {
+    /****** mettre des padding si besoin ***********/
+    border: 1px solid #F2F2F2;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.texte_information {
+    padding-left: 10px;
+}
 
 
 /****** Hebergements And Populaires ***********/
@@ -169,6 +264,71 @@ ul li {
 .hebergements {
     width: 65%;
 }
+.titre_hebergement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.case_hebergement img {
+    width: 100%;
+    height: 136px;
+        border-top-left-radius: 20px;
+           
+        border-top-right-radius: 20px;
+        
+}
+
+/****** J'ai enlevé width: X%; à voir par la suite / remettre si bug***********/
+.case_hebergement .card-content {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.case_hebergement .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;  
+}
+.case_hebergement .card-subtitle {
+    margin: 0;
+}
+.case_hebergement .card-rating {
+    margin-bottom: 5px;
+}
+.case_hebergement {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    padding-bottom: 30px;
+    padding-top: 45px;
+}
+.sous_titre_afficher {
+    font-size: 18px;
+}
+
+
+
+
+/****** Populaires & Hebergements ***********/
+
+.card-txt {
+    padding-bottom: 10px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
 
 /****** Populaires ***********/
 .populaires {
@@ -183,7 +343,7 @@ ul li {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 45px;
 }
 
 .populaires-cards img {
@@ -215,14 +375,110 @@ ul li {
     margin-bottom: 5px;
 }
 
+/* Activités à Marseille */
 
+.titre_activites {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.case_activites img {
+    width: 100%;
+    height: 380px;
+        border-top-left-radius: 20px;
+  
+        border-top-right-radius: 20px;
+        object-fit: cover;
+}
+/* test un width? */
+.case_activites .card-content {
+    padding-left: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.case_activites .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px; 
+}
+
+.case_activites {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding-bottom: 65px;
+    padding-left: 30px;
+}
+
+.card_activities {
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 298px;
+    height: auto;
+    transition: transform 0.5s ease;
+    
+}
+.card_activities:hover {
+    transform: scale(1.05);
+}
+
+/*Footer*/
+.footer_all {
+    display: flex;
+    justify-content: space-evenly;
+}
+.ul_footer {
+    list-style-type: none;
+}
+.li_footer {
+    list-style-type: none;
+}
+.footer_titre {
+    padding-left: 40px;
+}
+.footer {
+    background-color: #F2F2F2;
+
+
+}
+/*Test Margin*/
+.margin_main {
+    margin-right: 30px;
+}
+.header_margin {
+    margin-right: 30px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
+/****** Version Desktop  ***********/
+@media screen and (min-width: 1024px) {
+    .fa-magnifying-glass {
+        display: none;
+    }
+}
+
+
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media screen and (min-width: 767.98px) and (max-width: 1023px) {
+
+    .fa-magnifying-glass {
+        display: none;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -230,7 +486,23 @@ ul li {
     .hebergements {
         width: 100%;
     }
+    
+    .case_hebergement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .case_hebergement a {
+        width: 30%;
+    }
+    .case_hebergement .card-title {
+        font-size: 14px;
+    }
+    .case_hebergement .card-subtitle {
+        font-size: 14px;
+    }
+/****** Séparation pour y voir clair ***********/
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -255,7 +527,22 @@ ul li {
     }
 }
 
+
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+@media screen and (max-width: 767.98px) {
+        .fa-magnifying-glass {
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 15px 15px 15px 15px;
+        cursor: pointer;
+        padding-left: 10px;
+        padding-right: 3px;
+        position: relative;
+        right: 14px;
+        }
+        .bouton_recherche {
+            display: none;
+        }
+        
 }
