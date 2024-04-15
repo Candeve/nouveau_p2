@@ -435,13 +435,14 @@ margin: 0px;
 /*Footer*/
 .footer_all {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .ul_footer {
     list-style-type: none;
 }
 .li_footer {
     list-style-type: none;
+    padding-bottom: 15px;
 }
 .footer_titre {
     padding-left: 40px;
