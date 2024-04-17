@@ -48,7 +48,6 @@ a {
 
 .card-title {
     font-size: 16px;
-
 }
 
 .euro {
@@ -61,10 +60,14 @@ a {
 
 /* Barre de Navigation */
 
+.logo {
+    height: 30px;
+}
+
 .navigation, .navigation:hover {
-    padding: 13px;
+    padding: 32px;
     color: black;
-    border-top: 3px solid transparent;
+    border-top: 5px solid transparent;
 }
 
 .navigation:hover {
@@ -77,9 +80,13 @@ a {
 
 nav {
     display: flex;
-    justify-content: space-between; /* Pour aligner les éléments à gauche et à droite */
-    align-items: center; /* Pour aligner les éléments verticalement au centre */
-    padding: 15px 2px; /* Espacement interne */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 2px; 
+}
+.nav_bordure {
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 .ul_nav {
@@ -287,8 +294,7 @@ margin: 0px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+    align-items: flex-start;
 }
 .case_hebergement .card-title {
     margin-top: 10px;
@@ -311,13 +317,20 @@ margin: 0px;
     font-size: 18px;
 }
 
+.case_hebergement .card {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
 /****** Populaires & Hebergements ***********/
 
-.card-txt {
-    padding-bottom: 10px;
+.card-title {
+    grid-area: text;
+    margin: 5px;
+    height: 45px;
 }
 .card:hover {
     transform: scale(1.05);
@@ -330,6 +343,7 @@ margin: 0px;
   position: relative;
   overflow: hidden;
 }
+
 
 
 
@@ -358,7 +372,7 @@ margin: 0px;
 
 .populaires-cards .card-content {
     width: 67%;
-    padding-left: 15px;
+    padding-left: 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -380,65 +394,53 @@ margin: 0px;
 
 /* Activités à Marseille */
 
+.activites {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 2rem;
+}
 .titre_activites {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
+    padding-top: 30px;
 }
-.case_activites img {
-    width: 100%;
-    height: 380px;
-        border-top-left-radius: 20px;
-  
-        border-top-right-radius: 20px;
-        object-fit: cover;
-}
-/* test un width? */
-.case_activites .card-content {
-    padding-left: 19px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-.case_activites .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px; 
-}
-
-.case_activites {
+.card_activites {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding-bottom: 65px;
-    padding-left: 30px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    grid-gap: 2rem;
+    padding-bottom: 60px;
 }
-
-.card_activities {
-    background-color: #FFFFFF;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+.card_activites .card img {
+    width: 100%;
+    height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    width: 298px;
-    height: auto;
-    transition: transform 0.5s ease;
-    
 }
-.card_activities:hover {
-    transform: scale(1.05);
+.card_activites .card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
 }
+.card_activites .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+
 
 /*Footer*/
 .footer_all {
     display: flex;
     justify-content: space-between;
+    padding-right: 260px;
 }
 .ul_footer {
     list-style-type: none;
@@ -452,15 +454,19 @@ margin: 0px;
 }
 .footer {
     background-color: #F2F2F2;
-
-
 }
+
 /*Test Margin*/
 .margin_main {
     margin-right: 30px;
 }
 .header_margin {
     margin-right: 30px;
+}
+html {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: auto
 }
 
 
@@ -469,43 +475,58 @@ margin: 0px;
 /****** Media queries ***********/
 
 /****** Version Desktop  ***********/
-@media screen and (min-width: 1024px) {
-    .fa-magnifying-glass {
-        display: none;
-    }
-}
+
 
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (min-width: 767.98px) and (max-width: 1023px) {
+@media  (max-width: 1024px) {
+/* Barre Recherche */
 
-    .fa-magnifying-glass {
-        display: none;
+/* Barre Recherche */
+
+
+/* Filtres */
+    .filtre {
+        
+        flex-wrap: wrap;
+        margin-top: 30px;
     }
+/* Filtres */
 
+
+/* HERBERGEMENTS & Populaires */
     .hebergements-and-populaires {
         flex-direction: column;
     }
+/* HERBERGEMENTS & Populaires */
 
+
+/* HERBERGEMENTS*/
     .hebergements {
         width: 100%;
+        margin-top: 50px;
     }
     
     .case_hebergement {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+            display: flex;
+            
+            flex-wrap: wrap;
+    }
+    .hebergements-and-populaires section {
+        box-sizing: content-box;
     }
 
     .case_hebergement a {
         width: 30%;
     }
     .case_hebergement .card-title {
-        font-size: 14px;
+        font-size: 13px;
     }
     .case_hebergement .card-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
+
+/* HERBERGEMENTS*/
 
 
 /****** Séparation pour y voir clair ***********/
@@ -531,11 +552,18 @@ margin: 0px;
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .card_activites .card img {
+        width: 100%;
+        height: 250px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+    }
 }
 
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
         .fa-magnifying-glass {
         background-color: #0065FC;
         color: white;
@@ -551,4 +579,5 @@ margin: 0px;
             display: none;
         }
         
+
 }
