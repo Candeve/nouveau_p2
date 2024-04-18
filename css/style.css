@@ -10,6 +10,12 @@
     --filter-bg-color: #DEEBFF;
 }
 
+html {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: auto
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -67,18 +73,15 @@ a {
 }
 
 .navigation, .navigation:hover {
-    padding: 32px;
+    padding-top: 32px;
     color: black;
     border-top: 5px solid transparent;
 }
 
 .navigation:hover {
     border-top-color:#0065FC
-    
 }
-.navigation:hover {
-    color: #0065FC;
-}
+
 
 nav {
     display: flex;
@@ -425,16 +428,18 @@ margin: 0px;
     border-top-right-radius: 20px;
 }
 .card_activites .card-content {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 10px;
 }
 .card_activites .card {
     display: flex;
     flex-direction: column;
     padding: 0px;
+}
+.bloc_activites {
+    padding-left: 30px;
 }
 
 
@@ -468,18 +473,29 @@ margin: 0px;
 }
 
 
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 
 /****** Version Desktop  ***********/
+@media screen and (min-width: 1024px) {
+    .fa-magnifying-glass {
+        display: none;
+    }
+    
+}
+
 
 
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media  (max-width: 1024px) {
+@media screen and (min-width: 767.98px) and (max-width: 1024px) {
 /* Barre Recherche */
-
+    .fa-magnifying-glass {
+        display: none;
+    }
 /* Barre Recherche */
 
 
@@ -561,12 +577,24 @@ margin: 0px;
     }
     .card_activites .card-title {
         font-size: 14px;
+        padding-right: 10px;
+        margin: 10px;
     }
+    .card_activites .card-content {
+        padding: 0px;
+    }
+    /* Actiivites*/
+
+    /* Footer*/
+    .footer_all {
+        padding-right: 120px;
+    }
+   
 }
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
         .fa-magnifying-glass {
         background-color: #0065FC;
         color: white;
