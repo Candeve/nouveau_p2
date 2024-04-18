@@ -4,13 +4,14 @@
 }
 
 
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
-html {
+body {
     min-width: 320px;
     max-width: 1440px;
     margin: auto
@@ -221,6 +222,12 @@ input::placeholder {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
 }
+
+.all_filtre {
+    display: flex;
+    gap: 10px;
+}
+
 .bouton_filtre:hover {
     transform: scale(1.1);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -406,6 +413,7 @@ margin: 0px;
     align-items: flex-start;
     margin-top: 10px;
     gap: 2rem;
+    padding-left: 30px;
 }
 .titre_activites {
     display: flex;
@@ -438,9 +446,7 @@ margin: 0px;
     flex-direction: column;
     padding: 0px;
 }
-.bloc_activites {
-    padding-left: 30px;
-}
+
 
 
 
@@ -502,9 +508,14 @@ margin: 0px;
 /* Filtres */
     .filtre {
         
-        flex-wrap: wrap;
-        margin-top: 30px;
+        display: block;
+        padding-bottom: 10px;
     }
+
+    .bouton_filtre p {
+        
+        white-space: nowrap;
+        }
 /* Filtres */
 
 
