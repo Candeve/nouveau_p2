@@ -636,6 +636,9 @@ margin: 0px;
         .bouton_recherche {
             display: none;
         }
+        .recherche {
+            width:auto;
+        }
         
                 nav {
                     display: block;
@@ -652,6 +655,9 @@ margin: 0px;
                     border-bottom: 2px solid var(--main-color);
                     width: 100%;
                 }
+                .margin_main {
+                    margin-right: 0px;
+                }
         
                 .header_margin {
                     
@@ -662,9 +668,14 @@ margin: 0px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    padding-top: 10px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-bottom: 0px;
                 }
                 .logo {
                     height: 20px;
+                    padding-top: 15px;
                 }
                 .li_nav {
                     width: 100%;
@@ -683,7 +694,7 @@ margin: 0px;
 
                 .titre_h1 {
 
-                    font-size: 22px;
+                    font-size: 25px;
                 }
                 
                 .p_dessous_de_titre {
@@ -719,17 +730,45 @@ margin: 0px;
                     flex-direction: column-reverse;
                 
                 }
-                .hebergements-and-populaires section{
+                .hebergements-and-populaires section {
+                    
+                }
+                
+                #bloc_hebergements {
+                    background-color: transparent;
+                }
+                .hebergements{
                     border-radius: 0px;
-                    padding: 50px;
-                    box-sizing:content-box;
+                    background-color: transparent;
+                    width: 100%;
+                    
+                }
+                .section-title {
+                    padding-right: 100px;
+                }
+                .populaires-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
                 }
                 .populaires {
                     width: 100%;
+                    background-color:#F2F2F2;
+                    padding: 30px;
+                    box-sizing: border-box;
                 }
-                .populaires-cards {
-                    padding-left: 15px;
+                .populaires-cards .card {
+                    margin-top: 15px;
+                    width: 93%;
                 }
-
+                
+                
+                
+                
+                .body {
+                    margin: 0;
+                }
+                
+ 
                     
                 }
