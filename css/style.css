@@ -621,7 +621,7 @@ margin: 0px;
         
         }
         
-
+        /*barre de recherche*/
         .fa-magnifying-glass {
         background-color: #0065FC;
         color: white;
@@ -646,7 +646,9 @@ margin: 0px;
             width: 240px;
 
         }
-        
+        /*barre de recherche*/
+
+            /*nav*/
                 nav {
                     display: block;
                 }
@@ -698,6 +700,7 @@ margin: 0px;
                     text-align: center;
                     padding-left: 0px;
                 }
+                /*nav*/
 
                 .titre_h1 {
 
