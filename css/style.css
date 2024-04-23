@@ -295,18 +295,17 @@ margin: 0px;
 
 /****** J'ai enlevé width: X%; à voir par la suite / remettre si bug***********/
 .case_hebergement .card-content {
-    padding-left: 15px;
+    padding-left: 5px;
 
 }
 .case_hebergement .card-title {
-    margin-top: 5px;
-    margin-bottom: 4px;  
+    margin: 0;
 }
 .case_hebergement .card-subtitle {
     margin: 0;
 }
 .case_hebergement .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 .case_hebergement {
     display: grid;
@@ -398,7 +397,7 @@ margin: 0px;
     align-items: flex-start;
     margin-top: 10px;
     gap: 2rem;
-    padding-left: 30px;
+    padding-left: 35px;
     padding-right: 30px;
 }
 .titre_activites {
