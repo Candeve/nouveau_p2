@@ -632,6 +632,10 @@ margin: 0px;
         padding-right: 3px;
         position: relative;
         right: 14px;
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
         }
         .decalage_padding {
             padding: 15px;
@@ -785,10 +789,11 @@ margin: 0px;
                     flex-wrap: wrap;
                     flex-direction: column;
                     grid-gap: 15px;
+                    width: 100%;
                 }
                 .card_activites .card img {
                     height: 209px;
-                    width: 315px;
+                    width: 100%;
                 }
                 .card_activites .card-content .card-title {
                     padding-left: 10px;
