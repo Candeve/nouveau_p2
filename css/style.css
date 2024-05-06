@@ -71,7 +71,7 @@ a {
 
 .navigation, .navigation:hover {
     padding-top: 32px;
-    color: black;
+    
     border-top: 5px solid transparent;
 }
 
@@ -481,6 +481,10 @@ margin: 0px;
 .fa-magnifying-glass {
     display: none;
 }
+header nav ul li:hover a
+                {
+                    color: var(--main-color);
+                }
 
 
 
@@ -500,6 +504,7 @@ margin: 0px;
     .fa-magnifying-glass {
         display: none;
     }
+    
 
 /* Barre Recherche */
 
@@ -651,7 +656,7 @@ margin: 0px;
 
             .navigation, .navigation:hover {
                 padding-top: 32px;
-                color: black;
+                
                 border-top: 5px solid transparent;
             }
             
