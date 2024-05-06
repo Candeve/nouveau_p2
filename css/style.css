@@ -67,6 +67,19 @@ a {
 
 /* Barre de Navigation */
 
+
+
+.navigation, .navigation:hover {
+    padding-top: 32px;
+    color: black;
+    border-top: 5px solid transparent;
+}
+
+.navigation:hover {
+    border-top-color:#0065FC
+}
+
+
 .logo {
     height: 30px;
 }
@@ -465,49 +478,29 @@ margin: 0px;
 }
 
 
+.fa-magnifying-glass {
+    display: none;
+}
+
+
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 
-/****** Version Desktop  ***********/
-@media screen and (min-width: 1024px) {
-    .fa-magnifying-glass {
-        display: none;
-    }
 
-    .navigation, .navigation:hover {
-        padding-top: 32px;
-        color: black;
-        border-top: 5px solid transparent;
-    }
-    
-    .navigation:hover {
-        border-top-color:#0065FC
-    }
-    
-}
 
 
 
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media screen and (min-width: 768.99px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
 /* Barre Recherche */
     .fa-magnifying-glass {
         display: none;
     }
 
-    .navigation, .navigation:hover {
-        padding-top: 32px;
-        color: black;
-        border-top: 5px solid transparent;
-    }
-    
-    .navigation:hover {
-        border-top-color:#0065FC
-    }
 /* Barre Recherche */
 
 
@@ -565,9 +558,10 @@ margin: 0px;
     }
 
     .populaires-cards {
-        display: flex;
+        
         flex-direction: row;
         justify-content: space-between;
+        display: flex;
     }
 
     .populaires-cards a {
@@ -611,7 +605,7 @@ margin: 0px;
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 768.98px) {
+@media (max-width: 767.98px) {
 
         .main-container {
             padding: 0;
@@ -635,6 +629,7 @@ margin: 0px;
         display: flex;
         flex-direction: row;
         
+            
         align-items: center;
         }
         .decalage_padding {
@@ -653,6 +648,18 @@ margin: 0px;
         /*barre de recherche*/
 
             /*nav*/
+
+            .navigation, .navigation:hover {
+                padding-top: 32px;
+                color: black;
+                border-top: 5px solid transparent;
+            }
+            
+            .navigation:hover {
+                border-top-color:#ffffff
+            }
+
+
                 nav {
                     display: block;
                 }
@@ -665,8 +672,9 @@ margin: 0px;
                 header nav ul li:hover
                 {
                     border-top: 0;
-                    border-bottom: 2px solid var(--main-color);
+                    border-bottom: 4px solid var(--main-color);
                     width: 100%;
+                   
                 }
                 .margin_main {
                     margin-right: 0px;
@@ -697,7 +705,7 @@ margin: 0px;
                     margin: 0px;
                     padding-top: 0px;
                     padding-right: 0px;
-                    border-bottom: 2px solid #F2F2F2;
+                    border-bottom: 4px solid #F2F2F2;
                 }
                 .ul_nav {
                     width: 100%;
@@ -813,14 +821,20 @@ margin: 0px;
                 
                 }
 
-                
-                
-                
+                .populaires-cards {
+                    display: block;
+                }
+                .hebergements-and-populaires section {
+                    box-sizing: border-box;
+                }
                 
                 body {
                     margin: 0;
                     padding: 0;
                 }
+                
+                
+                
                 
  
                     
