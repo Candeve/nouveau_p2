@@ -69,13 +69,13 @@ a {
 
 
 
-.navigation, .navigation:hover {
+.navigation, .navigation:hover  {
     padding-top: 32px;
     
     border-top: 5px solid transparent;
 }
 
-.navigation:hover {
+.navigation:hover  {
     border-top-color:#0065FC
 }
 
@@ -481,7 +481,7 @@ margin: 0px;
 .fa-magnifying-glass {
     display: none;
 }
-header nav ul li:hover a
+.navigation:hover
                 {
                     color: var(--main-color);
                 }
